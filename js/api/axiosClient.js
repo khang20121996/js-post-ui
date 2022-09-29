@@ -7,8 +7,6 @@ const axiosClient = axios.create({
   },
 });
 
-<<<<<<< Updated upstream
-=======
 // Add a request interceptor
 axiosClient.interceptors.request.use(
   function (config) {
@@ -50,5 +48,4 @@ axiosClient.interceptors.response.use(
   }
 );
 
->>>>>>> Stashed changes
 export default axiosClient;
