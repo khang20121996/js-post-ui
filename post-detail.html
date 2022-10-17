@@ -58,7 +58,9 @@
     </header>
 
     <main>
-      <section id="postHeroImage" class="hero"></section>
+      <section id="postHeroImage" class="hero">
+       
+      </section>
 
       <section class="post-detail">
         <div class="container">
@@ -95,11 +97,15 @@
                 Praesentium ea aspernatur vero deserunt.
               </p>
 
-              <img
+              <div class="ratio ratio-16x9 bg-dark">
+                <img
+                data-album="mypost"
                 class="post-image"
-                src="https://picsum.photos/1368/800"
+                src="https://picsum.photos/id/12/1368/800"
                 alt="Picsum photos"
-              />
+                />
+              </div>
+              
 
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -122,11 +128,16 @@
                 Praesentium ea aspernatur vero deserunt.
               </p>
 
-              <img
+              
+
+              <div class="ratio ratio-16x9">
+                <img
+                data-album="mypost"
                 class="post-image"
-                src="https://picsum.photos/1368/1000"
+                src="https://picsum.photos/id/22/1368/1000"
                 alt="Picsum photos"
-              />
+                />
+              </div>
 
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -134,6 +145,15 @@
                 rem, non error, saepe quia dignissimos quas ducimus aliquid.
                 Praesentium ea aspernatur vero deserunt.
               </p>
+            
+              <div class="ratio ratio-16x9">
+                <img
+                  data-album="mypost"
+                  class="post-image"
+                  src="https://picsum.photos/id/44/1368/1000"
+                  alt="Picsum photos"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -144,7 +164,29 @@
       <small>Created by Po with <i class="fas fa-heart"></i></small>
     </footer>
 
+    <div id="lightbox" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+            <p></p>
+
+            <img data-id="lightboxImg" src="" alt="lightbox" width="100%" height="320px">
+
+            <div class="text-center mt-3">
+              <button data-id="lightboxPre" type="button" class="btn btn-secondary">Prev</button>
+              <button data-id="lightboxNext" type="button" class="btn btn-secondary">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts should be placed here to prevent blocking render UI -->
-    <!-- <script type="module" src="js/post-detail.mjs"></script> -->
+    <script type="module" src="js/post-detail.js"></script>.
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   </body>
 </html>

@@ -30,6 +30,25 @@ export function createPostElement(post) {
   if (timeSpanElement) timeSpanElement.textContent = dayjs(post.updatedAt).fromNow();
 
   // attach event
+  // go to post detail when click div.post-item
+  const divElement = liElement.firstElementChild;
+  if (divElement) {
+    divElement.addEventListener('click', (event) => {
+      const menu = liElement.querySelector('[data-id="menu"]');
+      if (menu && menu.contains(event.target)) return;
+      window.location.assign(`/post-detail.html?id=${post.id}`);
+    });
+  }
+
+  // go to edit-post when click edit button
+  const editButton = liElement.querySelector('[data-id="edit"]');
+  if (editButton) {
+    editButton.addEventListener('click', () => {
+      // e.stopPropagation()
+      window.location.assign(`/add-edit-post.html?id=${post.id}`);
+    });
+  }
+
   return liElement;
 }
 
